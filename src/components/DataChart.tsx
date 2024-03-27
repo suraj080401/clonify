@@ -1,8 +1,11 @@
 "use client";
 
 import React, { Component } from "react";
-import ReactApexChart from "react-apexcharts";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
+import dynamic from "next/dynamic";
+const ReactApexChart = dynamic(() => import("react-apexcharts"), {
+	ssr: false,
+});
 
 interface ApexChartState {
 	series: {
@@ -65,6 +68,7 @@ class DataChart extends React.Component<{}, ApexChartState> {
 						series={this.state.series}
 						type="area"
 						height={350}
+						width={"100%"}
 					/>
 				</div>
 			</div>
