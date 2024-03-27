@@ -45,8 +45,12 @@ const CollapsibleComponent: React.FC<CollapsibleComponentProps> = ({
 				</div>
 			</CollapsibleTrigger>
 			<CollapsibleContent className="flex flex-col space-y-2 mt-4 ml-7">
-				{childValues.map((item) => {
-					return <div className="text-[#5F6980] hover:text-black">{item}</div>;
+				{childValues.map((item, index) => {
+					return (
+						<div className="text-[#5F6980] hover:text-black" key={index}>
+							{item}
+						</div>
+					);
 				})}
 			</CollapsibleContent>
 		</Collapsible>
