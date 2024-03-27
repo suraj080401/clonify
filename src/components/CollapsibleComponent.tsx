@@ -28,7 +28,7 @@ const CollapsibleComponent: React.FC<CollapsibleComponentProps> = ({
 
 	return (
 		<Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-full">
-			<CollapsibleTrigger className="flex flex-row justify-between w-full items-center">
+			<CollapsibleTrigger className="flex flex-row justify-between w-full items-center text-[#5F6980] hover:text-black">
 				<div className="flex flex-row items-center space-x-2">
 					<div className="text-xl text-[#5F6980]">
 						{title === "Dashboard" ? <SiCircle /> : ""}
@@ -46,7 +46,7 @@ const CollapsibleComponent: React.FC<CollapsibleComponentProps> = ({
 			</CollapsibleTrigger>
 			<CollapsibleContent className="flex flex-col space-y-2 mt-4 ml-7">
 				{childValues.map((item) => {
-					return <div className="">{item}</div>;
+					return <div className="text-[#5F6980] hover:text-black">{item}</div>;
 				})}
 			</CollapsibleContent>
 		</Collapsible>

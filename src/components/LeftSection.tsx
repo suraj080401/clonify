@@ -40,7 +40,7 @@ const FileManagerProp: CollapsibleProps = {
 
 const LeftSection: React.FC = ({}) => {
 	return (
-		<div className="w-[20%] bg-white h-screen flex flex-col justify-between">
+		<div className="w-[20%] bg-white h-screen flex-col justify-between border-r hidden md:flex">
 			<div className="p-6 flex flex-col space-y-12">
 				<div>
 					<Image src={Logo} alt="Logo" width={100} height={400} />
