@@ -10,8 +10,8 @@ import Logo from "../../public/Logo.png";
 
 const NavBar: React.FC = () => {
 	return (
-		<div className="h-[7%]">
-			<div className="bg-white w-full px-4 py-2 flex-row justify-between hidden md:flex">
+		<div className="h-[15%] md:h-[7%]">
+			<div className="bg-white w-full h-full px-4 py-2 flex-row justify-between hidden md:flex">
 				<div className="w-full relative">
 					<Input
 						type="text"
@@ -43,7 +43,7 @@ const NavBar: React.FC = () => {
 				</div>
 			</div>
 			<div className="bg-white w-full h-full px-4 py-2 flex-col space-y-4 flex md:hidden">
-				<div className="flex flex-row w-full justify-between">
+				<div className="flex flex-row w-full justify-between py-2">
 					<div className="flex items-center">
 						<Image src={Logo} alt="Logo" width={100} height={400} />
 					</div>
