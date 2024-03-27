@@ -47,13 +47,14 @@ const RightSection: React.FC = ({}) => {
 			<ScrollArea className="max-h-[85%] md:max-h-[93%] flex flex-col p-4">
 				<Jumbotron />
 				<div className="flex md:flex-row flex-col space-y-4 md:space-y-0 justify-between my-4">
-					{dataSet.map((item) => {
+					{dataSet.map((item, index) => {
 						return (
 							<DataCards
 								title={item.title}
 								value={item.value}
 								change={item.change}
 								changeFrom={item.changeFrom}
+								key={index}
 							/>
 						);
 					})}
